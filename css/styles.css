@@ -73,7 +73,8 @@ a {
 
 /* Header */
 header {
-    height: 90vh;
+    max-height: 768px;
+    height: 100%;
     width: 100%;
     position: relative;
     background: url("../images/hero-bg.jpg");
@@ -100,18 +101,20 @@ header {
 
 nav {
     padding-left: 6rem;
+    margin-right: -40rem;
     margin-left: 9rem;
 }
 nav ul li {
     list-style-type: none;
-    display: inline-flex;
     margin-right: 1.5rem;
+    display: inline-flex;
+    justify-self: flex-end;
 }
 
 nav li a {
     color: rgb(131, 131, 131);
     font-weight: bold;
-    font-size: .95rem;
+    font-size: .85rem;
 }
 
 nav li a.active {
@@ -123,12 +126,12 @@ nav li a.active {
     border: none;
     outline: none;
     background: rgb(57, 181, 74);
-    padding: 0.3rem 0.6rem;
-    border-radius: 4px;
+    padding: 0.5rem 0.7rem;
+    border-radius: 3px;
     margin: 1rem 2rem 1rem 0;
     color: #fff;
     font-weight: lighter;
-    font-size: .95rem;
+    font-size: .85rem;
 }
 
 .banner {
@@ -137,6 +140,7 @@ nav li a.active {
     justify-content: space-between;
     align-items: center;
     margin: auto;
+    padding-left: 4rem;
 }
 
 .left-banner, .right-banner {
@@ -153,6 +157,7 @@ nav li a.active {
 }
 
 .left-banner p {
+    padding-top: 8rem;
     letter-spacing: .2rem;
     padding-bottom: 1rem;
     font-size: .85rem;
@@ -250,7 +255,6 @@ nav li a.active {
     font-weight: lighter;
 }
 .hr-left {
-    margin-left: 0rem;
     width: 60px;
     height: 2px;
     background: rgb(57, 181, 74);
@@ -291,7 +295,7 @@ nav li a.active {
 
     .row p {
         padding-bottom: 0.85rem;
-        max-width: 450px;
+        width: 450px;
         line-height: 2;
         text-align: left;
         color: rgb(151, 151, 151);
@@ -320,7 +324,7 @@ nav li a.active {
     margin-bottom: 3rem;
 }
 .app-wrapper {
-    display: flex;
+    display: flex; 
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
@@ -366,14 +370,15 @@ p.text-below {
     padding-left: 2rem;
 }
 
-    /* App Screen */
+/* App Screen */
     .app-screen {
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 8rem 0 8rem 0;
     }
-    /* End of App Screen */
+/* End of App Screen */
+
 /* End of How the app works */
 
 /* Pricing Option */
@@ -779,8 +784,186 @@ form i {
     padding-bottom: 4.5rem;
 }
 /* End Of Footer */
+/* Media Query for Tablets and Ipad */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Header */
+    .navbar {
+        width: 100%;
+    }
 
-/* Media Query  */
+    nav {
+        padding: 0;
+        margin: 0;
+    }
+
+    .left-banner {
+        padding: 0;
+        margin: 0;
+    }
+    .left-banner h4 {
+        width: 100%;
+        margin: 0;
+    }
+
+    .right-banner img {
+        padding: 0;
+        width: 40%;
+    }
+    .btn-header {
+        margin-bottom: 2rem;
+    }
+    /* End of Header */
+    /* About Section */
+    #about {
+        margin: 1rem 3rem 0 3rem;
+    }
+
+    .presentation , .info-container {
+        margin: 0;
+        padding: 0;
+    }
+
+    .info-container h4 {
+        width: 100%;
+    }
+    .info-container p {
+        width: 100%;
+        margin: 0 1rem 1.5rem 0;
+    }
+    
+    .row {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+        padding: 0;
+    }
+
+    .row img, .row h5 {
+        padding-bottom: .5rem;
+    }
+
+    .row p {
+        width: 100%;
+    }
+
+    .padding-p {
+        margin: 0;
+    }
+    /* End of About Section */
+    /* How the app works */
+    #app-works h4 {
+        margin-top: 1rem;
+    }
+
+    .app-container, .app-wrapper{
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .vertical-line {
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    p.text-above {
+        position: relative;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .publish-text1, .publish-text2 {
+        padding: 0;
+        margin: 0;
+    }
+    .upload-text1 {
+        padding: 0;
+    }
+    p.text-below {
+        margin: .5rem 0 0 2rem;
+        padding: 0;
+        width: 95%;
+    }
+
+    .text-below-right {
+        padding-left: 0;
+    }
+    /* End of How the app works */
+
+    /* App Screen */
+    .app-screen {
+        margin: .5rem 0 0 0;
+    }
+/* End of App Screen */
+
+/* Pricing Option */
+    #option {
+        padding: 0 1rem 0 1rem;
+    }
+
+    .options {
+        width: 100%;
+    }
+
+    .options h4 {
+        text-align: center;
+        padding-top: 1rem;
+    }
+
+    .hr-option {
+        margin: .5rem auto;
+    }
+
+    .options p {
+        width: 100%;
+    }
+    .option-container {
+        display: flex;
+        flex-flow: row wrap;
+    } 
+
+    
+/* End of Pricing Option */
+/* Review */
+    .slider-items q {
+        width: 100%;
+        padding: 0 1rem 1rem 2rem;
+    }
+/* End of Review */
+
+/* Footer */
+
+/* End of Footer */
+    footer {
+        padding: 0 3rem 3rem 2rem;
+    }
+
+    footer h5 {
+        padding-top: 1rem;
+    }
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 90%;
+        margin: auto;
+    }
+
+    .info {
+        margin-right: .5rem;
+    }
+
+    .info img {
+        padding: 0;
+    }
+    
+    .info p, .contact p, .newsletter p {
+        padding: 0;
+    }
+}
+/* End of Media Query for Tablets and Ipad */
+/* Media Query  for mobile devices*/
 @media only screen and (max-width: 800px) {
     html {
         overflow-x: hidden;
@@ -810,11 +993,14 @@ form i {
 
     nav {
         text-align: center;
-        margin-left: 2rem;
+        margin: 0;
         padding:0;
         line-height: 1.5rem;
     }
 
+    .active {
+        margin-left: 1rem;
+    }
     .btn-sign-up {
         margin-left: 2rem;
     }
@@ -844,6 +1030,10 @@ form i {
         padding: 0;
     }
 
+    .left-banner h4 {
+        line-height: 0;
+        font-size: 1rem;
+    }
     .left-banner p {
         font-size: .8rem;
         
@@ -853,14 +1043,13 @@ form i {
         width: 90%;
         font-size: 1.7rem;
         line-height: 1.5;
-        padding-bottom: 2rem;
+        padding-bottom: 1.3rem;
     }
 
     .right-banner img {
-        position: static;
         display: block;
-        margin: 0;
-        width: 35%;
+        margin: auto;
+        width: 40%;
         padding: 0;
     }
 
@@ -870,10 +1059,10 @@ form i {
         justify-content: flex-start;
     }
     .btn-header {
-        padding: .5rem .3rem;
         width: 60%;
-        margin: 0;
-        margin-bottom: .5rem;
+        margin: .3rem auto;
+        font-size: .6rem;
+        padding: .2rem 0;
     }
 
     .social-media {
@@ -979,23 +1168,37 @@ form i {
         justify-self: center;
     }
 
+    .app-container .number {
+        padding: 1px 2px;
+    }
     .vertical-line {
         border: none;
+        margin: 0;
+        padding: 0;
     }
 
-    p.text-above {
-        margin-bottom: .3rem;
+    p.text-above { 
+        margin-top: .5rem;
+        position: relative;
+        left: 0;
     }
 
     p.text-below {
         width: 80%;
-        margin: auto;
         font-size: .85rem;
-        padding-bottom: .7rem;
+        margin: 1rem 0 .5rem 1rem;
     }
 
+    .text-below-right {
+        padding: 0;
+    }
+    
     /* End of How App Works */
-
+    /* App Screen */
+    .app-screen {
+        margin: 1rem 0 1rem 0;
+    }
+    /* End of App Screen */
     /* Pricing Option */
     .option-container {
         display: flex;
@@ -1127,6 +1330,5 @@ form i {
         padding-top: 1.5rem;
     }
     /* End of Footer */
-/* End of Media Query */
-
 }
+/* End of Media Query for mobile devices*/
